@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+.sidebar {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #1c3754;
+  color: rgb(202, 79, 79);
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+}
+.sidebar.active {
+  left: 0;
+}
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+.profile h2 {
+  font-size: 1.4rem;
+  color: aliceblue;
+  text-decoration-color: aliceblue;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+}
+nav a {
+  display: block;
+  color: white;
+  padding: 12px 0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #00bcd4;
+  padding-left: 10px;
+}
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: black;
+  z-index: 1000;
+}
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../image/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 300px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+h2 {
+  font-size: 2em;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+.project-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #1d3557;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03);
+}
+a {
+  color: #1d3557;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
+}
+footer {
+  text-align: center;
+  background: #1d3557;
+  color: white;
+  padding: 30px 20px;
+  font-size: 0.95em;
+}

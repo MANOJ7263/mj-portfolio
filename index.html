@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manoj Raja | Portfolio</title>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- <link rel="stylesheet" href="style/style.css" /> -->
+  <!-- <script src="javascript/script.js" defer></script> -->
+  <script>const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+menuToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
+
+// Typing effect
+const typedText = document.getElementById("typed-text");
+const text = "I’m Developer | AI Enthusiast";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    typedText.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 100);
+  } else {
+    typedText.textContent = "";
+    i = 0;
+    setTimeout(typeEffect, 1000);
+  }
+}
+
+window.onload = typeEffect;
+</script>
+  <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+.sidebar {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #1c3754;
+  color: rgb(202, 79, 79);
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+}
+.sidebar.active {
+  left: 0;
+}
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+.profile h2 {
+  font-size: 1.4rem;
+  color: aliceblue;
+  text-decoration-color: aliceblue;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+}
+nav a {
+  display: block;
+  color: white;
+  padding: 12px 0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #00bcd4;
+  padding-left: 10px;
+}
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: black;
+  z-index: 1000;
+}
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../image/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 300px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+h2 {
+  font-size: 2em;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+.project-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 6px solid #1d3557;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03);
+}
+a {
+  color: #1d3557;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
+}
+footer {
+  text-align: center;
+  background: #1d3557;
+  color: white;
+  padding: 30px 20px;
+  font-size: 0.95em;
+}
+</style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="profile">
+      <img src="image/profile.jpg" alt="Manoj Raja" />
+      <h2>Manoj Raja</h2>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-skype"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <nav>
+      <a href="#home"><i class="fas fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#resume"><i class="fas fa-file-alt"></i> Resume</a>
+      <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+      <a href="#services"><i class="fas fa-cogs"></i> Services</a>
+      <a href="#dropdown"><i class="fas fa-layer-group"></i> Dropdown</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </div>
+
+  <!-- Toggle Button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Manoj Raja</h1>
+      <p id="typed-text"></p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently pursuing a B.Tech in Artificial Intelligence & Data Science. I'm passionate about building real-world applications using Python, Java, and deep learning technologies.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Online Book Store</h3>
+      <p>A responsive book store platform with features like user login, browsing, and cart, built using HTML, CSS, JS, and MySQL.</p>
+      <a href="#">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>Supermarket Billing System</h3>
+      <p>Java + MySQL based GUI billing system for retail store management and dynamic invoice generation.</p>
+      <a href="#">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>Gesture Recognition with CNN</h3>
+      <p>Real-time sign language recognition using OpenCV and Convolutional Neural Networks to predict text from hand gestures.</p>
+      <a href="#">View on GitHub</a>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Certifications & Hackathons</h2>
+    <ul>
+      <li>Machine Learning Foundation – Infosys Springboard</li>
+      <li>AI Foundation – Infosys Springboard</li>
+      <li>SIH Hackathon 2024 – Predictive Modeling</li>
+      <li>Robotics Workshop – IIT Delhi IHFC</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:manojraja7263@gmail.com">manojraja7263@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918508056920">+91 85080 56920</a></p>
+    <p>Location: Coimbatore, Tamil Nadu</p>
+    <a href="#">Download Resume</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Manoj Raja | Interactive Portfolio</p>
+  </footer>
+
+</body>
+</html>
